@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		57DCD04C2D6962740086DE80 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 57DCD04B2D6962740086DE80 /* FirebaseAuth */; };
+		57DCD0592D696B060086DE80 /* BezelKit in Frameworks */ = {isa = PBXBuildFile; productRef = 57DCD0582D696B060086DE80 /* BezelKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		575AABDC2D55D31F00B6D008 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +34,22 @@
 		575AABE52D55D31F00B6D008 /* CSCD-488-ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSCD-488-ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		57EDBF932D73B1AC000A4C63 /* Exceptions for "CSCD-488-Project" folder in "CSCD-488-Project" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 575AABCA2D55D31D00B6D008 /* CSCD-488-Project */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		575AABCD2D55D31D00B6D008 /* CSCD-488-Project */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				57EDBF932D73B1AC000A4C63 /* Exceptions for "CSCD-488-Project" folder in "CSCD-488-Project" target */,
+			);
 			path = "CSCD-488-Project";
 			sourceTree = "<group>";
 		};
@@ -52,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57DCD0592D696B060086DE80 /* BezelKit in Frameworks */,
+				57DCD04C2D6962740086DE80 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +98,7 @@
 				575AABCD2D55D31D00B6D008 /* CSCD-488-Project */,
 				575AABDE2D55D31F00B6D008 /* CSCD-488-ProjectTests */,
 				575AABE82D55D31F00B6D008 /* CSCD-488-ProjectUITests */,
+				57DCD04A2D6962740086DE80 /* Frameworks */,
 				575AABCC2D55D31D00B6D008 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +111,13 @@
 				575AABE52D55D31F00B6D008 /* CSCD-488-ProjectUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		57DCD04A2D6962740086DE80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +140,8 @@
 			);
 			name = "CSCD-488-Project";
 			packageProductDependencies = (
+				57DCD04B2D6962740086DE80 /* FirebaseAuth */,
+				57DCD0582D696B060086DE80 /* BezelKit */,
 			);
 			productName = "CSCD-488-Project";
 			productReference = 575AABCB2D55D31D00B6D008 /* CSCD-488-Project.app */;
@@ -195,6 +225,10 @@
 			);
 			mainGroup = 575AABC22D55D31D00B6D008;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				57DCD0492D69625F0086DE80 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				57DCD0572D696AE50086DE80 /* XCRemoteSwiftPackageReference "BezelKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 575AABCC2D55D31D00B6D008 /* Products */;
 			projectDirPath = "";
@@ -399,11 +433,13 @@
 				DEVELOPMENT_TEAM = JXVA5WXT99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CSCD-488-Project/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = MoodCast;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is used for estimating the travel time.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,9 +447,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jacoblucas.CSCD-488-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -428,11 +468,13 @@
 				DEVELOPMENT_TEAM = JXVA5WXT99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CSCD-488-Project/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = MoodCast;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is used for estimating the travel time.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,9 +482,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jacoblucas.CSCD-488-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -558,6 +604,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		57DCD0492D69625F0086DE80 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.8.1;
+			};
+		};
+		57DCD0572D696AE50086DE80 /* XCRemoteSwiftPackageReference "BezelKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/markbattistella/BezelKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		57DCD04B2D6962740086DE80 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57DCD0492D69625F0086DE80 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		57DCD0582D696B060086DE80 /* BezelKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57DCD0572D696AE50086DE80 /* XCRemoteSwiftPackageReference "BezelKit" */;
+			productName = BezelKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 575AABC32D55D31D00B6D008 /* Project object */;
 }
